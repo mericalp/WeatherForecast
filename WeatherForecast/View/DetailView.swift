@@ -18,6 +18,11 @@ struct DetailView: View {
   
         if let hourly = weatherVM.hourly {
     Spacer()
+        Zstack
+            {
+                LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)).opacity(0.3), Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))]), startPoint: .top, endPoint: .bottom)
+                
+                LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)).opacity(0.6), Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)).opacity(0.3)]), startPoint: .topLeading, endPoint: .bottomTrailing)
             
            
         VStack( alignment: .leading, spacing: 20 )
@@ -369,6 +374,7 @@ struct DetailView: View {
         .foregroundColor(Color.black.opacity(0.8))
         .background(Color(red: 112/255, green: 175/255, blue: 206/255))
         .cornerRadius(55)
+            }
         }
     }
 }
